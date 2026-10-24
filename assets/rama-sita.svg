@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1050" role="img" aria-labelledby="title desc">
+<title id="title">Rama and Sita in a Telugu folk-art inspired illustration</title><desc id="desc">Original devotional illustration of Rama and Sita with a bow, lotus blossoms, ornamental halo and traditional Indian textile motifs.</desc>
+<defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#f1e1c1"/><stop offset="1" stop-color="#e4cda5"/></linearGradient><pattern id="woven" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M11 2l9 9-9 9-9-9Z" fill="none" stroke="#a86e45" stroke-width="1" opacity=".3"/></pattern></defs>
+<rect width="900" height="1050" fill="url(#bg)"/><rect x="28" y="28" width="844" height="994" rx="8" fill="none" stroke="#78352f" stroke-width="3"/><rect x="45" y="45" width="810" height="960" fill="url(#woven)" opacity=".6"/>
+<path d="M100 780Q450 700 800 780L800 875H100Z" fill="#d2b77f"/>
+<circle cx="450" cy="400" r="280" fill="#f8edda" stroke="#c7a45f" stroke-width="5"/><circle cx="450" cy="400" r="257" fill="none" stroke="#a86e45" stroke-width="2" stroke-dasharray="3 12"/>
+<!-- Rama -->
+<path d="M170 805Q180 590 295 550Q385 575 420 700L430 820H160Z" fill="#547a9a" stroke="#39352d" stroke-width="5"/><path d="M190 780L420 720 430 820H160Z" fill="#d2a24d" stroke="#39352d" stroke-width="4"/>
+<path d="M235 580Q220 500 250 440L300 405 355 445Q385 515 360 585Z" fill="#6489aa" stroke="#39352d" stroke-width="5"/>
+<circle cx="300" cy="355" r="79" fill="#7298b8" stroke="#39352d" stroke-width="5"/><path d="M222 345Q204 250 276 238Q342 215 376 290L369 345Q338 300 300 310Q262 304 222 345Z" fill="#2a2520" stroke="#39352d" stroke-width="5"/>
+<path d="M255 255l45-43 45 43-12 20h-66Z" fill="#c7a45f" stroke="#39352d" stroke-width="4"/><path d="M269 350h62" stroke="#f5e9d0" stroke-width="6"/><circle cx="300" cy="326" r="8" fill="#9b3c32"/><circle cx="273" cy="357" r="5" fill="#292723"/><circle cx="327" cy="357" r="5" fill="#292723"/><path d="M280 388q20 18 40 0" fill="none" stroke="#39352d" stroke-width="5"/>
+<!-- bow -->
+<path d="M170 300Q100 450 175 620" fill="none" stroke="#8b5d38" stroke-width="8" stroke-linecap="round"/><path d="M170 300L175 620" stroke="#f4ead8" stroke-width="2"/>
+<!-- Sita -->
+<path d="M475 820L490 700Q535 575 615 550Q730 590 745 805H470Z" fill="#9b3c32" stroke="#39352d" stroke-width="5"/><path d="M480 810Q600 705 735 760L745 805H470Z" fill="#d2a24d" stroke="#39352d" stroke-width="4"/>
+<path d="M540 580Q510 505 545 445L600 405 655 445Q690 505 665 580Z" fill="#a64a40" stroke="#39352d" stroke-width="5"/><circle cx="600" cy="355" r="78" fill="#d6a27b" stroke="#39352d" stroke-width="5"/><path d="M522 345Q506 250 575 239Q640 214 680 290L676 345Q645 300 600 310Q560 304 522 345Z" fill="#292420" stroke="#39352d" stroke-width="5"/>
+<path d="M550 255l50-36 50 36-12 20h-76Z" fill="#c7a45f" stroke="#39352d" stroke-width="4"/><circle cx="600" cy="326" r="8" fill="#9b3c32"/><circle cx="572" cy="355" r="5" fill="#292723"/><circle cx="628" cy="355" r="5" fill="#292723"/><path d="M579 388q21 16 42 0" fill="none" stroke="#9b3c32" stroke-width="5"/><path d="M540 420q60 35 120 0" fill="none" stroke="#d2a24d" stroke-width="8"/>
+<!-- lotus garland -->
+<path d="M300 490Q450 610 600 490" fill="none" stroke="#f8edda" stroke-width="9" stroke-linecap="round" stroke-dasharray="2 18"/>
+<g transform="translate(450 700)" stroke="#a86e45" stroke-width="3"><path d="M0 60Q-72 12 0-45Q72 12 0 60Z" fill="#d58d91"/><path d="M0 60Q-100 45-95-7Q-45-12 0 60Z" fill="#e9b4a7"/><path d="M0 60Q100 45 95-7Q45-12 0 60Z" fill="#e9b4a7"/></g>
+<g fill="#a86e45"><circle cx="110" cy="170" r="5"/><circle cx="790" cy="170" r="5"/><circle cx="110" cy="660" r="5"/><circle cx="790" cy="660" r="5"/></g>
+<text x="450" y="930" text-anchor="middle" fill="#78352f" font-family="Georgia,serif" font-size="32" letter-spacing="7">RAMA · SITA</text><text x="450" y="967" text-anchor="middle" fill="#6e6b5e" font-family="Georgia,serif" font-size="16" letter-spacing="4">DEVOTION · DHARMA · LOVE</text>
+</svg>
