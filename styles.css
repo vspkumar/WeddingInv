@@ -168,3 +168,30 @@ footer{background:#351711;border-top:3px double #c58a35}
  .event-visual{min-height:340px}
  .blessing:before,.closing:before{inset:8px}
 }
+
+
+/* Wedding-week schedule: consistent with the vintage invitation panels */
+.schedule{background:#f4e4c4;border-block:1px solid #c7a36c}
+.schedule>.section-kicker{color:#87431f;margin-bottom:30px}
+.schedule-grid{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.schedule-day{position:relative;padding:28px 30px 24px;background:#fbefd8;border:1px solid #bd9254;box-shadow:0 7px 20px rgba(62,37,18,.07);min-width:0}
+.schedule-day:before{content:"";position:absolute;inset:7px;border:1px solid rgba(139,72,31,.2);pointer-events:none}
+.schedule-date{display:block;font:600 9px/1.5 var(--sans);letter-spacing:.16em;color:#36543a;margin-bottom:10px}
+.schedule-day h3{font:500 clamp(29px,3.2vw,38px)/1.05 var(--serif);color:#74251e;margin:0 0 20px}
+.schedule-day p{display:flex;flex-direction:column;gap:3px;border-top:1px solid #dbc49b;padding:12px 0 0;margin:12px 0 0;position:relative}
+.schedule-day p b{font:600 14px/1.35 var(--sans);color:#35251a}
+.schedule-day p span{font:13px/1.5 var(--sans);color:#594b3d}
+.schedule-day--main{background:#29432e;border-color:#c58a35}
+.schedule-day--main:before{border-color:rgba(232,198,132,.35)}
+.schedule-day--main .schedule-date{color:#e8c985}
+.schedule-day--main h3{color:#fff0d0}
+.schedule-day--main p{border-color:rgba(238,211,159,.35)}
+.schedule-day--main p b{color:#fff4df}
+.schedule-day--main p span{color:#f0dfc3}
+#schedule{scroll-margin-top:80px}
+@media(max-width:600px){.schedule-grid{grid-template-columns:1fr;gap:14px}.schedule-day{padding:25px 24px}.schedule-day h3{font-size:34px}}
+/* Give the devotional illustration a visible presence behind the invitation text. */
+.hero-photo{opacity:.42;filter:sepia(.18) saturate(.86);object-position:center 38%}
+.hero-wash{background:linear-gradient(90deg,rgba(244,234,216,.82),rgba(244,234,216,.60) 50%,rgba(244,234,216,.82)),linear-gradient(0deg,rgba(244,234,216,.72),transparent 42%)}
+.hero{background-size:cover, min(100%,1080px) auto}
+@media(max-width:540px){.hero-photo{opacity:.32}.hero-wash{background:linear-gradient(90deg,rgba(244,234,216,.84),rgba(244,234,216,.65)),linear-gradient(0deg,rgba(244,234,216,.75),transparent 42%)}}
