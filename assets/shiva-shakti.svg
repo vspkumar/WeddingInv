@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1050" role="img" aria-labelledby="title desc">
+<title id="title">Shiva and Shakti in a Telugu folk-art inspired illustration</title><desc id="desc">Original devotional illustration with two divine figures, lotus flowers, a crescent moon and temple ornament in muted indigo, vermilion and antique gold.</desc>
+<defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#e8d8b6"/><stop offset="1" stop-color="#f8edda"/></linearGradient><pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.4" fill="#a86e45" opacity=".38"/></pattern></defs>
+<rect width="900" height="1050" fill="url(#bg)"/><rect x="25" y="25" width="850" height="1000" rx="420" fill="none" stroke="#a86e45" stroke-width="3"/><rect x="42" y="42" width="816" height="966" rx="400" fill="url(#dots)" opacity=".55"/>
+<g fill="none" stroke="#a86e45" stroke-width="3"><path d="M450 70c-55 60-55 120 0 180 55-60 55-120 0-180Z"/><path d="M450 82v155M380 160q70 40 140 0M365 900q85-55 170 0"/></g>
+<g transform="translate(0 20)">
+<!-- halo -->
+<circle cx="450" cy="405" r="280" fill="#f7e9c9" stroke="#c7a45f" stroke-width="5"/><circle cx="450" cy="405" r="260" fill="none" stroke="#a86e45" stroke-width="2" stroke-dasharray="3 12"/>
+<!-- Shiva body -->
+<path d="M180 790Q185 590 305 555Q390 570 430 690L450 820H175Z" fill="#536e8e" stroke="#3d3b35" stroke-width="5"/>
+<path d="M190 760Q300 700 430 785L450 820H175Z" fill="#d0a354" stroke="#3d3b35" stroke-width="4"/>
+<path d="M235 580Q220 500 245 440L300 400L360 445Q390 510 360 590Z" fill="#7d9ab1" stroke="#3d3b35" stroke-width="5"/>
+<circle cx="300" cy="355" r="82" fill="#89a8bf" stroke="#3d3b35" stroke-width="5"/>
+<path d="M224 342Q202 252 275 240Q337 206 373 290L370 347Q337 300 300 310Q261 304 224 342Z" fill="#292723" stroke="#3d3b35" stroke-width="5"/>
+<path d="M255 257Q280 208 320 238Q292 255 291 287" fill="none" stroke="#a86e45" stroke-width="6"/>
+<path d="M260 347h80M263 362h74M270 377h60" stroke="#f6e8cb" stroke-width="7" stroke-linecap="round"/><circle cx="300" cy="326" r="8" fill="#9b3c32"/>
+<path d="M275 393q25 22 50 0" fill="none" stroke="#3d3b35" stroke-width="5"/>
+<!-- Shakti body -->
+<path d="M470 820L490 690Q530 570 615 555Q735 590 740 790H465Z" fill="#9b3c32" stroke="#3d3b35" stroke-width="5"/>
+<path d="M470 820Q590 700 730 760L740 790H465Z" fill="#d0a354" stroke="#3d3b35" stroke-width="4"/>
+<path d="M535 580Q510 510 540 445L600 400L660 445Q690 500 665 580Z" fill="#a94c42" stroke="#3d3b35" stroke-width="5"/>
+<circle cx="600" cy="355" r="80" fill="#d5a078" stroke="#3d3b35" stroke-width="5"/>
+<path d="M520 345Q505 250 574 240Q640 210 680 290L676 348Q644 300 600 310Q560 304 520 345Z" fill="#292723" stroke="#3d3b35" stroke-width="5"/>
+<path d="M550 252l50-35 50 35-12 20h-76Z" fill="#c7a45f" stroke="#3d3b35" stroke-width="4"/>
+<circle cx="600" cy="326" r="9" fill="#9b3c32"/><circle cx="571" cy="355" r="5" fill="#292723"/><circle cx="629" cy="355" r="5" fill="#292723"/><path d="M578 389q22 17 44 0" fill="none" stroke="#9b3c32" stroke-width="5"/>
+<path d="M540 422q60 38 120 0" fill="none" stroke="#d0a354" stroke-width="8"/>
+<!-- shared garland and lotus -->
+<path d="M300 490Q450 610 600 490" fill="none" stroke="#f2dfb6" stroke-width="9" stroke-linecap="round" stroke-dasharray="2 18"/>
+<g transform="translate(450 685)" stroke="#a86e45" stroke-width="3"><path d="M0 70Q-80 20 0-45Q80 20 0 70Z" fill="#d89a9c"/><path d="M0 70Q-115 50-105-10Q-48-12 0 70Z" fill="#e9b4a7"/><path d="M0 70Q115 50 105-10Q48-12 0 70Z" fill="#e9b4a7"/><path d="M0 70V-45" fill="none"/></g>
+</g>
+<g fill="#a86e45"><circle cx="140" cy="430" r="5"/><circle cx="760" cy="430" r="5"/><circle cx="160" cy="510" r="4"/><circle cx="740" cy="510" r="4"/></g>
+<text x="450" y="955" text-anchor="middle" fill="#78352f" font-family="Georgia,serif" font-size="32" letter-spacing="7">SHIVA · SHAKTI</text><text x="450" y="984" text-anchor="middle" fill="#6e6b5e" font-family="Georgia,serif" font-size="16" letter-spacing="4">DIVINE BALANCE</text>
+</svg>
