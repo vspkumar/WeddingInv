@@ -102,7 +102,7 @@ const MUSIC = (function () {
   const show = (on) => { btn.setAttribute("aria-pressed", String(on)); btn.setAttribute("aria-label", on ? "Pause music" : "Play music"); };
   let fade;
   const ramp = (to, ms, done) => { cancelAnimationFrame(fade); const from = audio.volume, t0 = performance.now();
-    const step = (t) => { const k = Math.min(1, (t - t0) / ms); audio.volume = from + (to - from) * k; if (k < 1) fade = requestAnimationFrame(step); else if (done) done(); };
+    const step = (t) => { const k = Math.max(0, Math.min(1, (t - t0) / ms)); audio.volume = Math.max(0, Math.min(1, from + (to - from) * k)); if (k < 1) fade = requestAnimationFrame(step); else if (done) done(); };
     fade = requestAnimationFrame(step); };
   const play = () => { if (!audio.paused) return; audio.volume = 0; audio.play().then(() => { show(true); ramp(0.5, 3000); }).catch(() => show(false)); };
   const pause = () => { show(false); ramp(0, 500, () => audio.pause()); };
