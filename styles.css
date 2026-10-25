@@ -7,7 +7,7 @@
   --green:#1f4a33; --pink:#e9a3b6; --ink:#3b2a20; --ink-soft:#6b5546;
   --serif:"Cormorant Garamond",Georgia,serif;
   --sans:"Jost","Helvetica Neue",Arial,sans-serif;
-  --script:"Tangerine","Snell Roundhand",cursive;
+  --script:"Great Vibes","Snell Roundhand",cursive;
   --pad:clamp(20px,6vw,48px);
   --scallop:30px;
   --cut-shadow:drop-shadow(0 2px 1px rgba(70,40,15,.18)) drop-shadow(0 10px 14px rgba(70,40,15,.16));
@@ -355,3 +355,75 @@ html.gate-lock .music{visibility:hidden}
 /* long full name must wrap, never clip */
 .name{white-space:normal;text-wrap:balance;font-size:clamp(3rem,2rem + 6vw,5.4rem)}
 @media (min-width:1100px){.name{font-size:clamp(3.4rem,4.6vw,4.8rem)}}
+
+/* ---------- v7: walking-couple scene, maroon footer, bolder and larger type ---------- */
+.scene{aspect-ratio:1/1.12}
+.scene__glow{left:50%;bottom:8%;width:92%;height:78%;translate:-50% 0;border-radius:50%;z-index:2;background:radial-gradient(closest-side,rgba(255,236,170,.95),rgba(255,224,150,.45) 55%,transparent 100%);animation:glow 6s ease-in-out infinite alternate}
+@keyframes glow{from{scale:.94;opacity:.75}to{scale:1.06;opacity:1}}
+.scene__walk{left:50%;bottom:4%;height:86%;width:auto;max-width:none;translate:-50% 0;z-index:4;filter:drop-shadow(0 12px 14px rgba(70,30,10,.35));transform-origin:50% 100%;animation:stride 6s ease-in-out infinite alternate}
+@keyframes stride{from{scale:1}to{scale:1.035}}
+.scene__lamp{bottom:10%}
+.scene__lamp--l{left:1%}.scene__lamp--r{right:1%}
+.scene__plant{width:50%;bottom:5%}
+.scene__plant--left{left:-16%}.scene__plant--right{right:-16%}
+@media (min-width:720px){
+  .scene{aspect-ratio:1.7/1}
+  .scene__walk{height:88%}
+  .scene__glow{width:46%}
+  .scene__plant{width:27%}.scene__plant--left{left:-1%}.scene__plant--right{right:-1%}
+  .scene__lamp{width:8%;bottom:11%}
+  .scene__lamp--l{left:22%}.scene__lamp--r{right:22%}
+}
+@media (prefers-reduced-motion:reduce){.scene__walk,.scene__glow{animation:none}}
+
+/* footer: deep maroon + ivory + gold, clearly separate from the sandy floor above */
+.footer{position:relative;background:radial-gradient(90% 120% at 50% 0,#7a1a2c 0,transparent 70%),#4e0d1b;color:#fff3da;box-shadow:none;border-top:3px solid #d9b673;padding:34px var(--pad) calc(48px + env(safe-area-inset-bottom))}
+.footer::before{content:"";position:absolute;left:0;right:0;top:5px;height:1px;background:rgba(217,182,115,.5)}
+.footer__garland{width:min(80%,420px);margin:0 auto 6px;filter:drop-shadow(0 4px 6px rgba(0,0,0,.35))}
+.footer__names{font-family:var(--script);font-weight:400;font-size:clamp(3.3rem,2.5rem + 4vw,5rem);line-height:1.15;color:#fff3da;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.footer__names span{font-family:var(--serif);font-style:italic;font-weight:600;font-size:.5em;color:#f0cd87}
+.footer__date{font-family:var(--sans);font-size:.92rem;font-weight:600;letter-spacing:.34em;color:#f0cd87;margin:12px -.34em 0 0}
+
+/* type: larger and heavier */
+body{font-size:clamp(1.3rem,1.12rem + .7vw,1.6rem);font-weight:500}
+.eyebrow{font-size:.86rem;font-weight:600;letter-spacing:.26em;margin-right:-.26em}
+.hero__bless{font-size:.74rem}
+.hero__title{font-weight:700;font-size:clamp(2.3rem,1.5rem + 3.8vw,4.8rem)}
+.lede{font-size:clamp(1.55rem,1.2rem + 1.3vw,2.1rem);font-weight:600;color:var(--ink)}
+.ceremony{font-weight:700;font-size:clamp(2.4rem,1.7rem + 3vw,3.9rem)}
+.name,.gate__names,.nick{font-weight:400}
+.name{font-size:clamp(3.4rem,2.3rem + 6.4vw,6rem);line-height:1.05}
+@media (min-width:1100px){.name{font-size:clamp(3.8rem,4.9vw,5.2rem)}}
+.gate__names{font-size:clamp(3.4rem,14vw,5.4rem)}
+.nick{font-size:clamp(2.9rem,2rem + 3.4vw,4.2rem)}
+.gate__date{font-size:.92rem;font-weight:600}
+.gate__note{font-size:.76rem;font-weight:600}
+.gate__open{font-size:.92rem;padding:20px 38px}
+.scroll-cue{font-size:.76rem;font-weight:600}
+.divine__title,.places__title{font-weight:700;font-size:clamp(2.3rem,1.6rem + 3vw,3.7rem)}
+.divine__card figcaption{font-weight:700;font-size:clamp(1.7rem,1.3rem + 1.4vw,2.2rem)}
+.divine__verse{font-weight:600;font-size:clamp(1.6rem,1.25rem + 1.5vw,2.3rem)}
+.place__name{font-weight:700;font-size:clamp(1.9rem,1.4rem + 1.7vw,2.6rem)}
+.place__what{font-size:.86rem;font-weight:600}
+.details__title{font-weight:600;font-size:clamp(2.1rem,1.5rem + 2.6vw,3.6rem)}
+.card__label{font-size:.86rem;font-weight:600}
+.card__big{font-weight:700;font-size:clamp(2.4rem,1.8rem + 2.2vw,3.2rem)}
+.card__text{font-size:1.32em;font-weight:600;color:var(--ink)}
+.card__time{font-size:.96rem;font-weight:600}
+.card__venue{font-size:1.2em;font-weight:600}
+.card__venue small{font-size:.76rem;font-weight:600}
+.chip{font-size:.8rem;font-weight:600;padding:11px 18px;min-height:46px}
+.countdown b{font-weight:600;font-size:clamp(2.4rem,1.8rem + 2.8vw,3.5rem)}
+.countdown span{font-size:.76rem;font-weight:600}
+.countdown__note{font-size:1.25em;font-weight:500}
+.scroll .blessing{font-weight:600;font-size:clamp(1.35rem,1.05rem + 1.4vw,1.95rem)}
+.families__word{font-size:.98rem;font-weight:600}
+.families__amp{font-weight:600}
+
+.footer__date{letter-spacing:.2em;margin-right:-.2em;font-size:.88rem}
+.footer{padding-bottom:calc(92px + env(safe-area-inset-bottom))}
+@media (min-width:720px){.footer__date{letter-spacing:.34em;margin-right:-.34em;font-size:.92rem}.footer{padding-bottom:calc(56px + env(safe-area-inset-bottom))}}
+@media (max-width:719px){.nick--sushmi{right:-26%;top:4%}.nick--sai{left:-30%}}
+@media (max-width:719px){.nick--sushmi{right:-27%;top:19%}}
+@media (max-width:719px){.nick{font-size:2.7rem}.nick--sushmi{right:-20%;top:30%}.nick--sai{left:-26%;bottom:10%}}
+@media (max-width:719px){.nick--sushmi{right:-25%;top:32%}}
