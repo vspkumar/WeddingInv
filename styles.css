@@ -254,3 +254,39 @@ html.gate-lock .music{visibility:hidden}
   .float-kalash{left:6%;bottom:8%}
 }
 @media (min-width:1100px){.float-kalash{left:2%;bottom:6%}}
+
+/* ---------- v5: nicknames, families, big banana leaves ---------- */
+.hero__hands{position:relative}
+.nick{position:absolute;font-family:var(--script);font-weight:700;font-size:clamp(2.4rem,1.7rem + 3.2vw,3.6rem);line-height:1;white-space:nowrap;pointer-events:none;text-shadow:0 2px 0 rgba(255,250,235,.9)}
+.hands-wrap{position:relative;height:100%;display:flex}
+.nick--sai{left:-34%;bottom:6%;color:#27527f}
+.nick--sushmi{right:-40%;top:6%;color:var(--maroon)}
+.js .nick{clip-path:inset(-25% 100% -25% -10%)}
+.opened .nick{animation:write 1.7s cubic-bezier(.65,0,.35,1) forwards,bob 4.2s ease-in-out infinite alternate}
+.opened .nick--sai{animation-delay:1.6s,3.4s}
+.opened .nick--sushmi{animation-delay:2.7s,4.5s}
+@keyframes write{to{clip-path:inset(-25% -12% -25% -10%)}}
+@keyframes bob{from{translate:0 -3px}to{translate:0 5px}}
+@media (prefers-reduced-motion:reduce){.js .nick{clip-path:none}.opened .nick{animation:none}}
+
+.families{padding-block:6px 4px}
+.families__line{font-family:"Great Vibes","Tangerine",cursive;font-weight:400;font-size:clamp(3.6rem,2.4rem + 8vw,6.4rem);line-height:1.02;color:var(--maroon);letter-spacing:.005em;text-shadow:0 1px 0 rgba(255,250,235,.9)}
+.families__amp{font-family:var(--serif);font-style:italic;font-size:clamp(1.8rem,1.3rem + 2.4vw,3rem);line-height:1;color:var(--gold);margin:.05em 0}
+.families__word{font-family:var(--sans);font-weight:500;font-size:clamp(.8rem,.7rem + .5vw,1.05rem);letter-spacing:.5em;text-transform:uppercase;color:var(--green);margin:.9em -.5em 0 0}
+
+.closing__plant{position:absolute;z-index:1;pointer-events:none;width:clamp(280px,74vw,720px);height:auto;top:clamp(60px,12vw,140px);opacity:.96}
+.closing__plant--l{left:calc(-1 * clamp(120px,30vw,330px))}
+.closing__plant--r{right:calc(-1 * clamp(120px,30vw,330px));scale:-1 1}
+.closing__text .scroll,.closing__text .families{position:relative;z-index:3}
+.families__line{text-shadow:0 0 14px rgba(251,241,217,.95),0 0 4px rgba(251,241,217,.95)}
+.scene__plant{width:56%;bottom:6%}
+.scene__plant--left{left:-18%}.scene__plant--right{right:-18%}
+@media (min-width:720px){
+  .scene__plant{width:30%;bottom:6%}
+  .scene__plant--left{left:-2%}.scene__plant--right{right:-2%}
+}
+
+@media (min-width:720px){
+  .nick--sai{left:auto;right:92%;bottom:8%}
+  .nick--sushmi{right:auto;left:90%;top:10%}
+}

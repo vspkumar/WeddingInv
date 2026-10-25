@@ -1,4 +1,4 @@
-/* Sai Prasanna & Sushmitha | Wedding invitation */
+/* Sai Prasanna Kumar & Sushmitha | Wedding invitation */
 
 /* ============================================================
    EDIT HERE: add the venue name and a Google Maps link per event.
@@ -57,7 +57,7 @@ document.addEventListener("click", (ev) => {
   const loc = [e.venue, e.city].filter(Boolean).join(", ");
   const ics = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//SaiSushmitha//Wedding//EN", "BEGIN:VEVENT",
     `UID:${e.key}-${e.date}@sai-sushmitha-wedding`, `DTSTAMP:${f(new Date())}`, `DTSTART:${f(start)}`, `DTEND:${f(end)}`,
-    `SUMMARY:${e.label.replace("The ", "")} | Sai Prasanna & Sushmitha`, `LOCATION:${loc}`,
+    `SUMMARY:${e.label.replace("The ", "")} | Sai Prasanna Kumar & Sushmitha`, `LOCATION:${loc}`,
     `DESCRIPTION:${e.time}${SITE ? "\\n" + SITE : ""}`, "END:VEVENT", "END:VCALENDAR"].join("\r\n");
   const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob([ics], { type: "text/calendar" }));
@@ -113,12 +113,13 @@ const MUSIC = (function () {
 /* ---------- Opening screen ---------- */
 (function () {
   const gate = document.getElementById("gate"), open = document.getElementById("gate-open");
-  if (!gate || !open) return;
+  if (!gate || !open) { document.documentElement.classList.add("opened"); return; }
   document.documentElement.classList.add("gate-lock");
   open.focus({ preventScroll: true });
   open.addEventListener("click", () => {
     if (MUSIC.wanted()) MUSIC.play();
     document.documentElement.classList.remove("gate-lock");
+    document.documentElement.classList.add("opened");
     gate.classList.add("is-leaving");
     setTimeout(() => gate.remove(), REDUCE ? 0 : 1300);
   }, { once: true });

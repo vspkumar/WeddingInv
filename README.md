@@ -1,4 +1,4 @@
-# Sai Prasanna & Sushmitha | Wedding Invitation
+# Sai Prasanna Kumar & Sushmitha | Wedding Invitation
 
 A scrollable "book" invitation. Static site, no build step.
 
