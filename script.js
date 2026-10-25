@@ -31,6 +31,8 @@ document.getElementById("events").innerHTML = EVENTS.map((e, i) => {
   const day = d.getDate();
   return `
     <article class="card" data-reveal>
+      <img class="card__corner card__corner--l" src="assets/filigree.webp" alt="" aria-hidden="true">
+      <img class="card__corner card__corner--r" src="assets/filigree.webp" alt="" aria-hidden="true">
       <img class="card__icon" src="assets/${e.icon}.webp" alt="" loading="lazy">
       <p class="card__label">${esc(e.label)}</p>
       <p class="card__big">${d.toLocaleString("en-US", { weekday: "long" })}</p>

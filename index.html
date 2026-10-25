@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Jost:wght@400;500&family=Tangerine:wght@700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/toran.webp" type="image/webp">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -25,7 +25,7 @@
 <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
   <img class="gate__toran" src="assets/toran.webp" width="1598" height="607" alt="">
   <div class="gate__inner">
-    <img class="gate__emblem" src="assets/ganesha.webp" width="319" height="318" alt="">
+    <img class="gate__emblem" src="assets/ganesha-seated.webp" width="220" height="265" alt="Lord Ganesha">
     <p class="eyebrow">You are invited to the wedding of</p>
     <h2 class="gate__names" id="gate-title">Sai Prasanna <span>&amp;</span> Sushmitha</h2>
     <p class="gate__date">13 &amp; 16 . 12 . 2026</p>
@@ -77,25 +77,54 @@
       <p class="full" data-reveal>Vadnala Sai Prasanna Kumar <span>with</span> Neelamsetty Sushmitha</p>
     </div>
 
-    <img class="float-lotus float-lotus--a cut" src="assets/lotus.webp" width="460" height="451" loading="lazy" alt="" aria-hidden="true">
+    <img class="float-kalash cut" src="assets/kalash.webp" width="183" height="239" loading="lazy" alt="" aria-hidden="true">
     <img class="float-lotus float-lotus--b cut" src="assets/lotus.webp" width="460" height="451" loading="lazy" alt="" aria-hidden="true">
   </section>
 
   <!-- 3. BLESSINGS OF THE DIVINE -->
   <section class="divine" id="divine">
+    <img class="garland-h" src="assets/garland-h.webp" width="726" height="156" loading="lazy" alt="" aria-hidden="true">
     <p class="eyebrow" data-reveal>With the blessings of</p>
     <h2 class="divine__title" data-reveal>The Divine Couples</h2>
     <div class="divine__grid">
       <figure class="divine__card" data-reveal>
-        <img src="assets/shiva-parvati.jpg" width="900" height="1125" loading="lazy" alt="Lord Shiva and Goddess Parvati seated together">
+        <img src="assets/shiva-parvati-round.webp" width="267" height="290" loading="lazy" alt="Lord Shiva and Goddess Parvati">
         <figcaption>Lord Shiva &amp; Parvathi</figcaption>
       </figure>
       <figure class="divine__card" data-reveal>
-        <img src="assets/rama-sita.jpg" width="354" height="514" loading="lazy" alt="Lord Rama and Sita">
+        <img src="assets/rama-sita-round.webp" width="273" height="290" loading="lazy" alt="Lord Rama and Sita">
         <figcaption>Lord Rama &amp; Sita</figcaption>
       </figure>
     </div>
     <p class="divine__verse" data-reveal>Two souls, one journey, infinite love.</p>
+    <div class="divine__rite" data-reveal>
+      <img src="assets/homam.webp" width="205" height="225" loading="lazy" alt="Rama and Sita before the sacred fire with two rishis">
+      <img src="assets/thali.webp" width="240" height="133" loading="lazy" alt="A puja plate with kumkum, turmeric and rice">
+    </div>
+  </section>
+
+  <!-- 3b. THE PLACES -->
+  <section class="places" id="places">
+    <p class="eyebrow" data-reveal>Where we celebrate</p>
+    <h2 class="places__title" data-reveal>Two Cities, One Celebration</h2>
+    <div class="places__grid">
+      <article class="place" data-reveal>
+        <div class="place__art place__art--coast">
+          <img class="place__coast" src="assets/coast.webp" width="474" height="250" loading="lazy" alt="Visakhapatnam coastal road with the sea and hills">
+          <img class="place__lighthouse cut" src="assets/lighthouse.webp" width="194" height="249" loading="lazy" alt="">
+          <img class="place__boats cut" src="assets/boats.webp" width="264" height="251" loading="lazy" alt="">
+        </div>
+        <p class="place__name">Visakhapatnam</p>
+        <p class="place__what">The Wedding · 13 December</p>
+      </article>
+      <article class="place" data-reveal>
+        <div class="place__art place__art--nandi">
+          <img class="place__nandi cut" src="assets/nandi.webp" width="232" height="244" loading="lazy" alt="Nandi, the sacred bull">
+        </div>
+        <p class="place__name">Hanamkonda</p>
+        <p class="place__what">The Reception · 16 December</p>
+      </article>
+    </div>
   </section>
 
   <!-- 4. THE EVENTS -->
@@ -121,10 +150,10 @@
   <section class="closing" id="blessings">
     <div class="edge edge--cream" aria-hidden="true"></div>
     <div class="closing__text">
-      <span class="divider" data-reveal aria-hidden="true"></span>
-      <p class="blessing" data-reveal>Your presence and blessings will make this special day even more memorable.</p>
+      <img class="garland-h garland-h--sm" data-reveal src="assets/garland-h.webp" width="726" height="156" loading="lazy" alt="" aria-hidden="true">
+      <div class="scroll" data-reveal><p class="blessing">Your presence and blessings will make this special day even more memorable.</p></div>
       <p class="eyebrow" data-reveal>With love</p>
-      <p class="hosts" data-reveal>Vadnala &amp; Neelamsetty Families</p>
+      <div class="hosts-row" data-reveal><img class="cut" src="assets/lamps.webp" width="192" height="234" loading="lazy" alt="" aria-hidden="true"><p class="hosts">Vadnala &amp; Neelamsetty Families</p><img class="cut" src="assets/lamps.webp" width="192" height="234" loading="lazy" alt="" aria-hidden="true"></div>
     </div>
 
     <div class="scene" aria-hidden="true">
@@ -148,6 +177,6 @@
   <span class="music__bars" aria-hidden="true"><i></i><i></i><i></i></span>
 </button>
 
-<script src="script.js?v=3"></script>
+<script src="script.js?v=4"></script>
 </body>
 </html>

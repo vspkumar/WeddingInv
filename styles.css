@@ -210,3 +210,47 @@ html.gate-lock .music{visibility:hidden}
   .garland,.scroll-cue i,.petal,.hero__hands img,.music__bars i,.gate__open{animation:none}
   .gate{transition:none}.petals{display:none}.chip{transition:none}
 }
+
+/* ---------- v4: extra art ---------- */
+.float-kalash{position:absolute;z-index:1;pointer-events:none;width:clamp(60px,17vw,112px);left:2%;bottom:3%;rotate:-6deg}
+.garland-h{display:block;width:min(86%,520px);margin:0 auto clamp(18px,4vw,30px);filter:var(--cut-shadow)}
+.garland-h--sm{width:min(80%,360px)}
+.divine{position:relative}
+.divine__grid{max-width:520px}
+.divine__card img{width:min(100%,290px);margin-inline:auto;border:0;border-radius:0;box-shadow:none;filter:var(--cut-shadow)}
+.divine__rite{display:flex;align-items:flex-end;justify-content:center;gap:clamp(14px,5vw,40px);margin-top:clamp(28px,6vw,48px)}
+.divine__rite img{height:auto;filter:var(--cut-shadow)}
+.divine__rite img:first-child{width:clamp(120px,32vw,190px)}
+.divine__rite img:last-child{width:clamp(110px,30vw,190px)}
+
+.places{text-align:center;padding:clamp(48px,10vw,96px) var(--pad) clamp(70px,13vw,130px);background:linear-gradient(var(--paper),var(--cream))}
+.places__title{font-weight:600;font-size:clamp(1.9rem,1.4rem + 2.4vw,3rem);color:var(--maroon);margin:.2em 0 1em}
+.places__grid{display:grid;gap:30px;grid-template-columns:1fr;max-width:860px;margin-inline:auto}
+.place{background:rgba(255,250,235,.75);border:1px solid var(--gold);border-radius:4px 4px 90px 90px / 4px 4px 30px 30px;padding:22px 18px 24px;box-shadow:0 0 0 5px var(--cream),0 0 0 6px var(--gold-soft),0 14px 24px rgba(70,30,10,.16)}
+.place__art{position:relative;aspect-ratio:474/290;max-width:420px;margin:0 auto 10px}
+.place__coast{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.place__lighthouse{position:absolute;left:-4%;bottom:-2%;width:23%}
+.place__boats{position:absolute;right:-3%;bottom:-6%;width:27%}
+.place__art--nandi{display:grid;place-items:center}
+.place__nandi{width:min(52%,230px)}
+.place__name{font-weight:600;font-size:clamp(1.5rem,1.2rem + 1.4vw,2.1rem);color:var(--green);margin-top:12px}
+.place__what{font-family:var(--sans);font-size:.74rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-text);margin-top:2px}
+
+.card__corner{position:absolute;top:6px;width:44px;height:auto;opacity:.9;pointer-events:none}
+.card__corner--l{left:6px}
+.card__corner--r{right:6px;scale:-1 1}
+
+.scroll{width:min(100%,520px);margin:0 auto 1.2em;aspect-ratio:259/265;max-height:520px;display:grid;place-items:center;
+  background:url(assets/scroll.webp) center/100% 100% no-repeat;padding:22% 16%;filter:var(--cut-shadow)}
+.scroll .blessing{margin:0;font-size:clamp(1.15rem,.95rem + 1.2vw,1.65rem);line-height:1.28;max-width:none}
+.hosts-row{display:flex;align-items:flex-end;justify-content:center;gap:clamp(8px,3vw,24px)}
+.hosts-row img{width:clamp(44px,13vw,76px);height:auto;margin-bottom:4px}
+.hosts-row .hosts{margin:0 0 6px;text-align:center}
+.gate__emblem{width:clamp(72px,20vw,104px)}
+
+@media (min-width:720px){
+  .places__grid{grid-template-columns:1fr 1fr;gap:40px}
+  .divine__grid{max-width:760px}
+  .float-kalash{left:6%;bottom:8%}
+}
+@media (min-width:1100px){.float-kalash{left:2%;bottom:6%}}
