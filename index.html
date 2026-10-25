@@ -5,95 +5,149 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Sai Prasanna &amp; Sushmitha | Wedding Invitation</title>
   <meta name="description" content="You are invited to the wedding of Vadnala Sai Prasanna Kumar and Neelamsetty Sushmitha. Wedding on 13 December 2026 in Visakhapatnam. Reception on 16 December 2026 in Hanamkonda.">
-  <meta name="theme-color" content="#efdcb4">
+  <meta name="theme-color" content="#f6e8c8">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Sai Prasanna &amp; Sushmitha | Wedding Invitation">
   <meta property="og:description" content="Wedding: Sunday, 13 December 2026, Visakhapatnam. Reception: Wednesday, 16 December 2026, Hanamkonda.">
   <meta property="og:image" content="assets/shiva-parvati.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/lotus.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&family=Tangerine:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Jost:wght@400;500&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/toran.webp" type="image/webp">
+  <link rel="stylesheet" href="styles.css?v=3">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
 
 <!-- Opening screen: the tap lets the music play -->
 <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
-  <div class="gate__toran" aria-hidden="true"></div>
+  <img class="gate__toran" src="assets/toran.webp" width="1598" height="607" alt="">
   <div class="gate__inner">
-    <p class="eyebrow">Om Sri Ganeshaya Namaha</p>
-    <img class="gate__lotus" src="assets/lotus.svg" width="120" height="70" alt="">
+    <img class="gate__emblem" src="assets/ganesha.webp" width="319" height="318" alt="">
+    <p class="eyebrow">You are invited to the wedding of</p>
     <h2 class="gate__names" id="gate-title">Sai Prasanna <span>&amp;</span> Sushmitha</h2>
-    <p class="gate__date">13 &amp; 16 December 2026</p>
-    <button class="btn btn--maroon" id="gate-open" type="button">Open Invitation</button>
+    <p class="gate__date">13 &amp; 16 . 12 . 2026</p>
+    <button class="gate__open" id="gate-open" type="button">Open Invitation</button>
     <p class="gate__note">♪ Best with sound on</p>
   </div>
 </div>
 
 <div class="petals" aria-hidden="true"></div>
 
-<main class="book" id="book">
+<!-- 1. HERO -->
+<header class="hero" id="top">
+  <img class="toran" src="assets/toran.webp" width="1598" height="607" fetchpriority="high" alt="" aria-hidden="true">
+  <div class="garland garland--left" aria-hidden="true"><img src="assets/garland.webp" width="230" height="1396" alt=""></div>
+  <div class="garland garland--right" aria-hidden="true"><img src="assets/garland.webp" width="230" height="1396" alt=""></div>
 
-  <!-- Cover: Shiva and Parvati -->
-  <section class="page page--cover" id="cover">
-    <div class="frame">
-      <p class="eyebrow">Om Sri Ganeshaya Namaha</p>
-      <img class="painting" src="assets/shiva-parvati.jpg" width="900" height="1125" alt="Lord Shiva and Goddess Parvati seated together under a garland of mango leaves and jasmine">
-      <p class="cover__title">The Wedding of</p>
-      <h1 class="cover__names">Sai Prasanna <i>&amp;</i> Sushmitha</h1>
-      <p class="cover__full">Vadnala Sai Prasanna Kumar <span>with</span> Neelamsetty Sushmitha</p>
-      <p class="cover__hint">Scroll to turn the pages</p>
-      <span class="chev" aria-hidden="true"></span>
+  <div class="hero__inner">
+    <img class="emblem" src="assets/ganesha.webp" width="319" height="318" alt="Lord Ganesha">
+    <p class="eyebrow hero__bless">Om Sri Ganeshaya Namaha</p>
+    <h1 class="hero__title">
+      <span class="line"><span>Two Hearts,</span></span>
+      <span class="line"><span>One Beautiful <em>Beginning</em></span></span>
+    </h1>
+    <div class="hero__hands">
+      <img src="assets/hands.webp" width="644" height="1294" fetchpriority="high" alt="Shiva's hand holding Parvati's hand, in cut paper">
     </div>
+  </div>
+
+  <a class="scroll-cue" href="#invite" aria-label="Scroll to the invitation"><span>Scroll</span><i></i></a>
+</header>
+
+<main>
+  <!-- 2. THE INVITATION -->
+  <section class="invite" id="invite">
+    <div class="arch" aria-hidden="true">
+      <div class="arch__glow"></div>
+      <img class="arch__rings cut" src="assets/rings.webp" width="496" height="519" loading="lazy" alt="">
+      <img class="arch__frame cut" src="assets/arch.webp" width="900" height="1579" loading="lazy" alt="">
+    </div>
+
+    <div class="invite__text">
+      <p class="lede" data-reveal>We’re delighted to invite you to the</p>
+      <h2 class="ceremony" data-reveal>Wedding of</h2>
+      <div class="names" data-reveal>
+        <p class="name">Sai Prasanna</p>
+        <p class="amp">&amp;</p>
+        <p class="name">Sushmitha</p>
+      </div>
+      <p class="full" data-reveal>Vadnala Sai Prasanna Kumar <span>with</span> Neelamsetty Sushmitha</p>
+    </div>
+
+    <img class="float-lotus float-lotus--a cut" src="assets/lotus.webp" width="460" height="451" loading="lazy" alt="" aria-hidden="true">
+    <img class="float-lotus float-lotus--b cut" src="assets/lotus.webp" width="460" height="451" loading="lazy" alt="" aria-hidden="true">
   </section>
 
-  <!-- Blessing: Rama and Sita -->
-  <section class="page page--bless" id="blessing">
-    <div class="frame">
-      <p class="eyebrow">With the blessings of</p>
-      <p class="gods">Lord Shiva &amp; Parvathi <span>and</span> Lord Rama &amp; Sita</p>
-      <img class="painting painting--fade" src="assets/rama-sita.jpg" width="424" height="576" loading="lazy" alt="Lord Rama and Sita">
-      <p class="verse">Two souls, one journey, infinite love.</p>
-      <img class="lotus-sep" src="assets/lotus.svg" width="120" height="70" loading="lazy" alt="">
-      <p class="invite">With joy in our hearts, we invite you and your family to the wedding of</p>
-      <p class="names2">Vadnala Sai Prasanna Kumar</p>
-      <p class="amp">&amp;</p>
-      <p class="names2">Neelamsetty Sushmitha</p>
+  <!-- 3. BLESSINGS OF THE DIVINE -->
+  <section class="divine" id="divine">
+    <p class="eyebrow" data-reveal>With the blessings of</p>
+    <h2 class="divine__title" data-reveal>The Divine Couples</h2>
+    <div class="divine__grid">
+      <figure class="divine__card" data-reveal>
+        <img src="assets/shiva-parvati.jpg" width="900" height="1125" loading="lazy" alt="Lord Shiva and Goddess Parvati seated together">
+        <figcaption>Lord Shiva &amp; Parvathi</figcaption>
+      </figure>
+      <figure class="divine__card" data-reveal>
+        <img src="assets/rama-sita.jpg" width="354" height="514" loading="lazy" alt="Lord Rama and Sita">
+        <figcaption>Lord Rama &amp; Sita</figcaption>
+      </figure>
     </div>
+    <p class="divine__verse" data-reveal>Two souls, one journey, infinite love.</p>
   </section>
 
-  <!-- Wedding and Reception pages are built by script.js from the EVENTS list -->
-  <div id="pages"></div>
+  <!-- 4. THE EVENTS -->
+  <section class="details" id="details">
+    <div class="edge" aria-hidden="true"></div>
+    <div class="details__inner">
+      <p class="eyebrow eyebrow--light" data-reveal>Save the Date</p>
+      <h2 class="details__title" data-reveal>Join us as two families become one</h2>
 
-  <!-- Closing -->
-  <section class="page page--close" id="closing">
-    <div class="frame">
-      <p class="eyebrow">Save the Date</p>
-      <p class="muh">Wedding Muhurtham</p>
-      <p class="muh__time">Sunday, 13 December 2026 · 8:21 PM</p>
-      <div class="countdown" aria-live="off">
+      <div class="cards" id="events"></div>
+
+      <div class="countdown" data-reveal aria-live="off">
         <div><b id="cd-d">00</b><span>Days</span></div>
         <div><b id="cd-h">00</b><span>Hours</span></div>
         <div><b id="cd-m">00</b><span>Minutes</span></div>
         <div><b id="cd-s">00</b><span>Seconds</span></div>
       </div>
-      <p class="verse">Your presence and blessings will make this special day even more memorable.</p>
-      <img class="lotus-sep" src="assets/lotus.svg" width="120" height="70" loading="lazy" alt="">
-      <p class="eyebrow">With love</p>
-      <p class="hosts">Vadnala &amp; Neelamsetty Families</p>
-      <p class="footer__names">Sai Prasanna <i>&amp;</i> Sushmitha</p>
+      <p class="countdown__note" data-reveal>to the Wedding Muhurtham</p>
+    </div>
+  </section>
+
+  <!-- 5. BLESSINGS + CLOSING SCENE -->
+  <section class="closing" id="blessings">
+    <div class="edge edge--cream" aria-hidden="true"></div>
+    <div class="closing__text">
+      <span class="divider" data-reveal aria-hidden="true"></span>
+      <p class="blessing" data-reveal>Your presence and blessings will make this special day even more memorable.</p>
+      <p class="eyebrow" data-reveal>With love</p>
+      <p class="hosts" data-reveal>Vadnala &amp; Neelamsetty Families</p>
+    </div>
+
+    <div class="scene" aria-hidden="true">
+      <div class="scene__plant scene__plant--left"><img class="cut" src="assets/banana.webp" width="610" height="898" loading="lazy" alt=""></div>
+      <div class="scene__plant scene__plant--right"><img class="cut" src="assets/banana.webp" width="610" height="898" loading="lazy" alt=""></div>
+      <img class="scene__pooja cut" src="assets/pooja.webp" width="640" height="340" loading="lazy" alt="">
+      <div class="scene__floor"></div>
+      <img class="scene__couple cut" src="assets/couple.webp" width="820" height="727" loading="lazy" alt="">
     </div>
   </section>
 </main>
 
-<nav class="dots" id="dots" aria-label="Pages"></nav>
+<footer class="footer">
+  <p class="footer__names">Sai Prasanna <span>&amp;</span> Sushmitha</p>
+  <p class="footer__date">13 &amp; 16 . 12 . 2026</p>
+</footer>
 
 <audio id="bgm" src="assets/music.mp3" loop preload="auto"></audio>
-<button class="music" id="music-toggle" type="button" aria-pressed="false" aria-label="Play music">♪</button>
+<button class="music" id="music-toggle" type="button" aria-pressed="false" aria-label="Play music">
+  <svg class="music__note" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
+  <span class="music__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+</button>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>
