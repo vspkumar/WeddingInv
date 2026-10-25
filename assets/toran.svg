@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="76" viewBox="0 0 120 76">
+  <!-- cord -->
+  <path d="M0 5 Q30 11 60 5 T120 5" fill="none" stroke="#8a6218" stroke-width="1.6"/>
+  <!-- mango leaf, centre -->
+  <path d="M60 6 C48 24 50 50 60 70 C70 50 72 24 60 6Z" fill="#2f6b3d" stroke="#1d4a29" stroke-width="1"/>
+  <path d="M60 8 V66" stroke="#9cc28a" stroke-width="1.1"/>
+  <path d="M60 22 L53 30 M60 22 L67 30 M60 36 L52 45 M60 36 L68 45 M60 50 L55 57 M60 50 L65 57" stroke="#9cc28a" stroke-width=".8" fill="none"/>
+  <!-- small mango leaves, sides -->
+  <path d="M26 7 C19 18 20 32 26 44 C32 32 33 18 26 7Z" fill="#3d7c4a" stroke="#1d4a29" stroke-width=".8"/>
+  <path d="M26 9 V40" stroke="#9cc28a" stroke-width=".9"/>
+  <path d="M94 7 C87 18 88 32 94 44 C100 32 101 18 94 7Z" fill="#3d7c4a" stroke="#1d4a29" stroke-width=".8"/>
+  <path d="M94 9 V40" stroke="#9cc28a" stroke-width=".9"/>
+  <!-- marigolds -->
+  <g fill="#f08a1c" stroke="#c2620b" stroke-width=".8"><circle cx="43" cy="13" r="6.2"/><circle cx="43" cy="26" r="6.8"/><circle cx="77" cy="13" r="6.2"/><circle cx="77" cy="26" r="6.8"/><circle cx="6" cy="14" r="5.5"/><circle cx="114" cy="14" r="5.5"/></g>
+  <g fill="#ffc23a"><circle cx="43" cy="13" r="2.8"/><circle cx="43" cy="26" r="3"/><circle cx="77" cy="13" r="2.8"/><circle cx="77" cy="26" r="3"/><circle cx="6" cy="14" r="2.4"/><circle cx="114" cy="14" r="2.4"/></g>
+  <!-- jasmine buds -->
+  <g fill="#fffaf0" stroke="#d9c9a2" stroke-width=".7"><ellipse cx="43" cy="40" rx="2.8" ry="4.6"/><ellipse cx="43" cy="50" rx="2.5" ry="4"/><ellipse cx="77" cy="40" rx="2.8" ry="4.6"/><ellipse cx="77" cy="50" rx="2.5" ry="4"/><ellipse cx="10" cy="28" rx="2.5" ry="4"/><ellipse cx="110" cy="28" rx="2.5" ry="4"/></g>
+</svg>

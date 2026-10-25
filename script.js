@@ -7,36 +7,11 @@
             searches Maps for "venue, city" instead.
    ============================================================ */
 const EVENTS = [
-  { date: "2026-12-09", city: "Hanamkonda", icon: "kalash", items: [
-    { name: "Pochamma Pooja", time: "8:30 AM onwards", start: "08:30", venue: "", map: "" },
-    { name: "Cocktail Party", time: "Night", note: "Followed by a cocktail party at home", start: "19:30", venue: "", map: "" },
-  ]},
-  { date: "2026-12-10", city: "Hanamkonda", icon: "dhol", items: [
-    { name: "Pelli Koduku Ceremony", time: "Ayirendlu · Kooralu · Mailapollu", start: "10:00", venue: "", map: "" },
-    { name: "Departure to Vizag", time: "By 7:00 PM", note: "Gather at Warangal Railway Station by 7:00 PM and travel to Vizag", start: "19:00", venue: "Warangal Railway Station", map: "", travel: true },
-  ]},
-  { date: "2026-12-11", city: "Visakhapatnam", icon: "dancer", items: [
-    { name: "Pelli Kuthuru Ceremony", time: "8:30 AM onwards", start: "08:30", venue: "", map: "" },
-    { name: "Sangeet", time: "6:30 PM onwards", start: "18:30", venue: "", map: "" },
-  ]},
-  { date: "2026-12-12", city: "Visakhapatnam", icon: "bowl", items: [
-    { name: "Haldi", time: "Morning", start: "09:00", venue: "", map: "" },
-    { name: "Mehendi", time: "Night", start: "19:00", venue: "", map: "" },
-  ]},
   { date: "2026-12-13", city: "Visakhapatnam", icon: "mangalsutra", items: [
-    { name: "Pradhanam", time: "10:30 AM", start: "10:30", venue: "", map: "" },
     { name: "Wedding", time: "Muhurtham · 8:21 PM", note: "The auspicious moment", start: "20:21", venue: "", map: "", main: true },
   ]},
-  { date: "2026-12-14", city: "Visakhapatnam", icon: "car", items: [
-    { name: "Appagintalu", time: "6:30 AM onwards", start: "06:30", venue: "", map: "" },
-    { name: "Travel to Hanamkonda", time: "7:00 AM from Vizag", start: "07:00", venue: "", map: "", travel: true },
-    { name: "Baraat & Bride Arrival", time: "Night", start: "19:00", venue: "", map: "", city: "Hanamkonda" },
-  ]},
-  { date: "2026-12-15", city: "Hanamkonda", icon: "kalash", items: [
-    { name: "Satyanarayana Vratam", time: "10:00 AM onwards", start: "10:00", venue: "", map: "" },
-  ]},
   { date: "2026-12-16", city: "Hanamkonda", icon: "plate", items: [
-    { name: "Reception", time: "Afternoon", start: "12:30", venue: "", map: "" },
+    { name: "Reception", time: "Afternoon · 12:30 PM", start: "12:30", venue: "", map: "" },
   ]},
 ];
 
@@ -198,4 +173,23 @@ const MUSIC = (function () {
     });
   }, { threshold: 0.35 });
   all.forEach((p) => io.observe(p));
+})();
+
+/* ---------- Traditional decoration: mango-leaf toranam, marigold, jasmine, lotus ---------- */
+(function () {
+  const petals = (n, rx, ry, cy, fill, stroke) => Array.from({ length: n }, (_, i) =>
+    `<ellipse rx="${rx}" ry="${ry}" cy="${cy}" fill="${fill}"${stroke ? ` stroke="${stroke}" stroke-width=".4"` : ""} transform="rotate(${(i * 360 / n).toFixed(1)})"/>`).join("");
+  const lp = (a, fill) => `<path d="M0 0C-10 -10 -9 -24 0 -34C9 -24 10 -10 0 0Z" fill="${fill}" stroke="#c2476d" stroke-width=".8" transform="rotate(${a})"/>`;
+  const defs = `
+    <symbol id="leaf" viewBox="-14 0 28 92"><path d="M0 0C14 22 14 62 0 92C-14 62 -14 22 0 0Z" fill="#2f6b3d"/><path d="M0 0C14 22 14 62 0 92Z" fill="#46934f" opacity=".7"/><path d="M0 6V86" stroke="#bfe0a0" stroke-width="1.2" fill="none"/></symbol>
+    <symbol id="marigold" viewBox="-20 -20 40 40">${petals(14, 4.2, 9, -11, "#f59a1b")}${petals(10, 3.4, 7, -7, "#f7b32b")}${petals(8, 2.6, 5, -4, "#e8740f")}<circle r="2.6" fill="#b4500a"/></symbol>
+    <symbol id="jasmine" viewBox="-10 -10 20 20">${petals(5, 2.9, 5.5, -5, "#fffdf5", "#d8cdb0")}<circle r="1.7" fill="#e8c24a"/></symbol>
+    <symbol id="lotus" viewBox="-40 -28 80 44"><ellipse cy="11" rx="30" ry="4" fill="#3f8a4f"/><g transform="translate(0 10)">${lp(-68, "#f4a3bd")}${lp(68, "#f4a3bd")}${lp(-44, "#f293b0")}${lp(44, "#f293b0")}${lp(-22, "#f7b3c8")}${lp(22, "#f7b3c8")}${lp(0, "#fbd0dc")}</g></symbol>
+    <pattern id="toranP" width="64" height="120" patternUnits="userSpaceOnUse"><path d="M0 6H64" stroke="#7a5a1d" stroke-width="2.5"/><use href="#leaf" x="4" y="6" width="26" height="86" transform="rotate(7 17 6)"/><use href="#leaf" x="34" y="6" width="26" height="86" transform="rotate(-7 47 6)"/><use href="#marigold" x="22" y="84" width="20" height="20"/><circle cx="32" cy="8" r="3.4" fill="#a3202e"/></pattern>
+    <pattern id="jasP" width="14" height="18" patternUnits="userSpaceOnUse"><path d="M7 0V18" stroke="#3f8a4f" stroke-width="1.4"/><use href="#jasmine" x="1" y="3" width="12" height="12"/></pattern>`;
+  document.body.insertAdjacentHTML("afterbegin", `<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>${defs}</defs></svg>`);
+  document.querySelectorAll(".frame").forEach((f) => {
+    f.insertAdjacentHTML("afterbegin", `<svg class="toran" viewBox="0 0 640 120" aria-hidden="true"><rect width="640" height="120" fill="url(#toranP)"/></svg>`);
+    f.insertAdjacentHTML("beforeend", `<svg class="gajra gajra--l" aria-hidden="true"><rect width="100%" height="100%" fill="url(#jasP)"/></svg><svg class="gajra gajra--r" aria-hidden="true"><rect width="100%" height="100%" fill="url(#jasP)"/></svg>`);
+  });
 })();
