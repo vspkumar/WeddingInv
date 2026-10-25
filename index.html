@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Jost:wght@400;500&family=Tangerine:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/toran.webp" type="image/webp">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -64,10 +64,8 @@
 <main>
   <!-- 2. THE INVITATION -->
   <section class="invite" id="invite">
-    <div class="arch" aria-hidden="true">
-      <div class="arch__glow"></div>
-      <img class="arch__rings cut" src="assets/rings.webp" width="496" height="519" loading="lazy" alt="">
-      <img class="arch__frame cut" src="assets/arch.webp" width="900" height="1579" loading="lazy" alt="">
+    <div class="invite__art" data-reveal>
+      <img class="shiva-seated" src="assets/shiva-parvati-seated.webp" width="900" height="1233" loading="lazy" alt="Lord Shiva and Goddess Parvati seated together, Parvati resting her head on Shiva's shoulder">
     </div>
 
     <div class="invite__text">
@@ -81,7 +79,6 @@
     </div>
 
     <img class="float-kalash cut" src="assets/kalash.webp" width="183" height="239" loading="lazy" alt="" aria-hidden="true">
-    <img class="float-lotus float-lotus--b cut" src="assets/lotus.webp" width="460" height="451" loading="lazy" alt="" aria-hidden="true">
   </section>
 
   <!-- 3. BLESSINGS OF THE DIVINE -->
@@ -161,12 +158,13 @@
       <div class="families" data-reveal><p class="families__line">Vadnala</p><p class="families__amp">&amp;</p><p class="families__line">Neelamsetty</p><p class="families__word">Families</p></div>
     </div>
 
-    <div class="scene" aria-hidden="true">
-      <div class="scene__plant scene__plant--left"><img class="cut" src="assets/banana.webp" width="610" height="898" loading="lazy" alt=""></div>
-      <div class="scene__plant scene__plant--right"><img class="cut" src="assets/banana.webp" width="610" height="898" loading="lazy" alt=""></div>
-      <img class="scene__pooja cut" src="assets/pooja.webp" width="640" height="340" loading="lazy" alt="">
-      <div class="scene__floor"></div>
-      <img class="scene__couple cut" src="assets/couple.webp" width="820" height="727" loading="lazy" alt="">
+    <div class="scene" data-reveal>
+      <div class="scene__plant scene__plant--left" aria-hidden="true"><img class="cut" src="assets/banana.webp" width="610" height="898" loading="lazy" alt=""></div>
+      <div class="scene__plant scene__plant--right" aria-hidden="true"><img class="cut" src="assets/banana.webp" width="610" height="898" loading="lazy" alt=""></div>
+      <img class="scene__lamp scene__lamp--l cut" src="assets/lamps.webp" width="188" height="234" loading="lazy" alt="" aria-hidden="true">
+      <img class="scene__lamp scene__lamp--r cut" src="assets/lamps.webp" width="188" height="234" loading="lazy" alt="" aria-hidden="true">
+      <div class="scene__floor" aria-hidden="true"></div>
+      <div class="scene__embrace"><img src="assets/shiva-parvati-embrace.jpg" width="1100" height="733" loading="lazy" alt="Lord Shiva and Goddess Parvati seen from behind, Shiva's arm around her shoulders"></div>
     </div>
   </section>
 </main>
@@ -182,6 +180,6 @@
   <span class="music__bars" aria-hidden="true"><i></i><i></i><i></i></span>
 </button>
 
-<script src="script.js?v=5"></script>
+<script src="script.js?v=6"></script>
 </body>
 </html>

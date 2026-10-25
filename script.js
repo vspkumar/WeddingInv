@@ -73,10 +73,11 @@ document.addEventListener("click", (ev) => {
   const pad = (n) => String(n).padStart(2, "0");
   const tick = () => {
     const s = Math.floor(Math.max(0, t - Date.now()) / 1000);
-    el.d.textContent = pad(Math.floor(s / 86400));
-    el.h.textContent = pad(Math.floor((s % 86400) / 3600));
-    el.m.textContent = pad(Math.floor((s % 3600) / 60));
-    el.s.textContent = pad(s % 60);
+    const set = (n, v) => { if (n.textContent === v) return; n.textContent = v; if (REDUCE) return; n.classList.remove("tick"); void n.offsetWidth; n.classList.add("tick"); };
+    set(el.d, pad(Math.floor(s / 86400)));
+    set(el.h, pad(Math.floor((s % 86400) / 3600)));
+    set(el.m, pad(Math.floor((s % 3600) / 60)));
+    set(el.s, pad(s % 60));
   };
   tick(); setInterval(tick, 1000);
 })();

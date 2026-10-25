@@ -290,3 +290,68 @@ html.gate-lock .music{visibility:hidden}
   .nick--sai{left:auto;right:92%;bottom:8%}
   .nick--sushmi{right:auto;left:90%;top:10%}
 }
+
+/* ---------- v6: seated painting, shrine scene, gold footer, livelier motion ---------- */
+.invite__art{width:min(84vw,380px);margin:0 auto clamp(14px,4vw,26px);position:relative;z-index:2}
+.invite__art img{width:100%;height:auto;filter:var(--cut-shadow)}
+@media (min-width:720px){.invite__art{width:min(46vw,400px)}}
+@media (min-width:1100px){.invite__art{width:420px;margin:0}}
+
+.scene__embrace{position:absolute;z-index:4;left:11%;width:78%;bottom:9%;transform-origin:50% 100%;
+  background:#000;border:3px solid var(--gold);outline:1px solid var(--gold);outline-offset:4px;
+  border-radius:50% 50% 14px 14px / 34% 34% 14px 14px;overflow:hidden;
+  box-shadow:0 0 0 7px var(--cream),0 16px 34px rgba(40,15,5,.45)}
+.scene__embrace img{width:100%;height:auto}
+.scene__lamp{width:15%;bottom:12%;z-index:5}
+.scene__lamp--l{left:-1%}.scene__lamp--r{right:-1%}
+.scene__plant{bottom:4%}
+@media (min-width:720px){
+  .scene__embrace{left:26%;width:48%;bottom:10%}
+  .scene__lamp{width:8%;bottom:14%}
+  .scene__lamp--l{left:19%}.scene__lamp--r{right:19%}
+}
+
+/* gold footer, deep maroon text */
+.footer{background:linear-gradient(#d4a443,#bd8a30);color:#4a0f18;box-shadow:0 -3px 0 #e6c27e inset}
+.footer__names{color:#4a0f18;text-shadow:0 1px 0 rgba(255,236,190,.6)}
+.footer__names span{color:#7a1520}
+.footer__date{color:#3b2a20}
+
+/* ---- motion: gentle breathing / enlarging on most art ---- */
+@keyframes breathe{from{scale:1;translate:0 0}to{scale:1.04;translate:0 -6px}}
+@keyframes breathe-s{from{scale:1}to{scale:1.06}}
+@keyframes sway2{from{rotate:-1.4deg}to{rotate:1.8deg}}
+@keyframes popin{0%{scale:.86;opacity:0}100%{scale:1;opacity:1}}
+.invite__art img{animation:breathe 7s ease-in-out infinite alternate}
+.emblem,.gate__emblem,.card__icon,.float-kalash,.garland-h,.divine__rite img{animation:breathe-s 5.5s ease-in-out infinite alternate}
+.divine__card img{animation:breathe 8s ease-in-out infinite alternate}
+.divine__card:nth-child(2) img{animation-delay:-3s}
+.divine__rite img:last-child{animation-delay:-2.5s}
+.place__art{animation:breathe-s 7s ease-in-out infinite alternate}
+.place:nth-child(2) .place__art{animation-delay:-3.5s}
+.hero__hands .hands-wrap img{animation:float 6s ease-in-out infinite alternate,breathe-s 6s ease-in-out infinite alternate}
+.scene__embrace{animation:breathe-s 9s ease-in-out infinite alternate}
+.scene__lamp{animation:breathe-s 4.5s ease-in-out infinite alternate;transform-origin:50% 100%}
+.scene__plant,.closing__plant{transform-origin:50% 100%;animation:sway2 7s ease-in-out infinite alternate}
+.scene__plant--right,.closing__plant--r{animation-delay:-3.5s}
+.scroll{animation:breathe-s 8s ease-in-out infinite alternate}
+
+/* reveals also enlarge slightly */
+.js [data-reveal]{scale:.94;transition:opacity .9s ease,translate .9s var(--ease),scale .9s var(--ease)}
+.js [data-reveal].in{scale:1}
+.card{transition:translate .4s var(--ease),scale .4s var(--ease)}
+.card:hover{scale:1.025;translate:0 -4px}
+.countdown b.tick{animation:tickpop .55s var(--ease)}
+@keyframes tickpop{0%{scale:1.22;opacity:.4}100%{scale:1;opacity:1}}
+.divine__card{transition:scale .5s var(--ease)}
+.divine__card:hover{scale:1.03}
+
+@media (prefers-reduced-motion:reduce){
+  .js [data-reveal]{scale:1;transition:none}
+  .invite__art img,.emblem,.gate__emblem,.card__icon,.float-kalash,.garland-h,.divine__rite img,.divine__card img,.place__art,
+  .hero__hands .hands-wrap img,.scene__embrace,.scene__lamp,.scene__plant,.closing__plant,.scroll{animation:none}
+}
+
+/* long full name must wrap, never clip */
+.name{white-space:normal;text-wrap:balance;font-size:clamp(3rem,2rem + 6vw,5.4rem)}
+@media (min-width:1100px){.name{font-size:clamp(3.4rem,4.6vw,4.8rem)}}
