@@ -114,30 +114,101 @@ const MUSIC = (function () {
 /* ---------- Opening screen ---------- */
 (function () {
   const gate = document.getElementById("gate"), open = document.getElementById("gate-open");
-  if (!gate || !open) { document.documentElement.classList.add("opened"); return; }
+  if (!gate || !open) { document.documentElement.classList.add("opened"); setTimeout(() => window.revealHero && window.revealHero(), 200); return; }
   document.documentElement.classList.add("gate-lock");
   open.focus({ preventScroll: true });
   open.addEventListener("click", () => {
     if (MUSIC.wanted()) MUSIC.play();
     document.documentElement.classList.remove("gate-lock");
     document.documentElement.classList.add("opened");
+    setTimeout(() => window.revealHero && window.revealHero(), REDUCE ? 0 : 750);
     gate.classList.add("is-leaving");
     setTimeout(() => gate.remove(), REDUCE ? 0 : 1300);
   }, { once: true });
 })();
 
-/* ---------- Reveal on scroll ---------- */
+/* ============================================================
+   Text and scroll choreography
+   ============================================================ */
+
+/* Split text into words. mode "mask": each word rises out of a mask. mode "scrub": words light up with scroll. */
+function splitWords(el, mode) {
+  let n = 0;
+  const walk = (node) => {
+    [...node.childNodes].forEach((ch) => {
+      if (ch.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        ch.textContent.split(/(\s+)/).forEach((part) => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(" ")); return; }
+          if (mode === "mask") {
+            const outer = document.createElement("span"), inner = document.createElement("span");
+            outer.className = "w"; inner.className = "wi"; inner.style.setProperty("--i", n++); inner.textContent = part;
+            outer.appendChild(inner); frag.appendChild(outer);
+          } else {
+            const s = document.createElement("span"); s.className = "sw"; s.textContent = part; n++; frag.appendChild(s);
+          }
+        });
+        node.replaceChild(frag, ch);
+      } else if (ch.nodeType === 1 && ch.tagName !== "BR") walk(ch);
+    });
+  };
+  walk(el);
+}
+document.querySelectorAll("[data-split]").forEach((el) => splitWords(el, "mask"));
+const scrubs = [...document.querySelectorAll("[data-scrub]")];
+scrubs.forEach((el) => { splitWords(el, "scrub"); el._w = [...el.querySelectorAll(".sw")]; });
+
+/* The hero waits for the opening screen to lift */
+window.revealHero = function () {
+  document.querySelectorAll(".hero [data-split]").forEach((el) => el.classList.add("in"));
+};
+
+/* Reveal on scroll */
 (function () {
-  const items = document.querySelectorAll("[data-reveal]");
+  const items = document.querySelectorAll("[data-reveal], [data-split], .thread");
+  const inHero = (el) => !!el.closest(".hero");
   if (!("IntersectionObserver" in window)) { items.forEach((i) => i.classList.add("in")); return; }
   const io = new IntersectionObserver((entries) => {
     entries.forEach((en) => {
       if (!en.isIntersecting) return;
-      const sibs = [...en.target.parentElement.children].filter((c) => c.hasAttribute("data-reveal"));
-      en.target.style.transitionDelay = Math.max(0, sibs.indexOf(en.target)) * 0.12 + "s";
-      en.target.classList.add("in");
-      io.unobserve(en.target);
+      const t = en.target;
+      if (t.hasAttribute("data-reveal")) {
+        const sibs = [...t.parentElement.children].filter((c) => c.hasAttribute("data-reveal"));
+        t.style.transitionDelay = Math.max(0, sibs.indexOf(t)) * 0.12 + "s";
+      }
+      t.classList.add("in");
+      io.unobserve(t);
     });
-  }, { threshold: 0.15, rootMargin: "0px 0px -6% 0px" });
-  items.forEach((i) => io.observe(i));
+  }, { threshold: 0.2, rootMargin: "0px 0px -8% 0px" });
+  items.forEach((i) => { if (!inHero(i)) io.observe(i); });
+})();
+
+/* Scroll-linked: word light-up and parallax, one rAF loop */
+(function () {
+  const par = [...document.querySelectorAll("[data-parallax]")];
+  if (REDUCE) { scrubs.forEach((el) => el._w.forEach((w) => w.classList.add("lit"))); return; }
+  let ticking = false;
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+  const frame = () => {
+    ticking = false;
+    const vh = innerHeight;
+    scrubs.forEach((el) => {
+      const r = el.getBoundingClientRect(), words = el._w;
+      if (r.bottom < -50 || r.top > vh + 50) { if (r.top > vh) words.forEach((w) => w.classList.remove("lit")); else words.forEach((w) => w.classList.add("lit")); return; }
+      const p = clamp((vh * 0.9 - r.top) / (vh * 0.42 + r.height * 0.3), 0, 1);
+      const lit = Math.ceil(p * words.length);
+      words.forEach((w, i) => w.classList.toggle("lit", i < lit));
+    });
+    par.forEach((el) => {
+      const host = el.parentElement.getBoundingClientRect();
+      if (host.bottom < -200 || host.top > vh + 200) return;
+      const py = clamp((host.top + host.height / 2 - vh / 2) * parseFloat(el.dataset.parallax), -110, 110);
+      el.style.setProperty("--py", py.toFixed(1) + "px");
+    });
+  };
+  const req = () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } };
+  addEventListener("scroll", req, { passive: true });
+  addEventListener("resize", req);
+  frame();
 })();

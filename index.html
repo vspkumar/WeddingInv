@@ -14,9 +14,9 @@
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Jost:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/toran.webp" type="image/webp">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=9">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -45,10 +45,7 @@
   <div class="hero__inner">
     <img class="emblem" src="assets/ganesha.webp" width="319" height="318" alt="Lord Ganesha">
     <p class="eyebrow hero__bless">Om Sri Ganeshaya Namaha</p>
-    <h1 class="hero__title">
-      <span class="line"><span>Two Hearts,</span></span>
-      <span class="line"><span>One Beautiful <em>Beginning</em></span></span>
-    </h1>
+    <h1 class="hero__title" data-split>Two Souls,<br>One Sacred <em>Journey</em></h1>
     <div class="hero__hands">
       <div class="hands-wrap">
         <img src="assets/hands.webp" width="644" height="1294" fetchpriority="high" alt="Shiva's hand holding Parvati's hand, in cut paper">
@@ -64,27 +61,29 @@
 <main>
   <!-- 2. THE INVITATION -->
   <section class="invite" id="invite">
-    <div class="invite__art" data-reveal>
+    <div class="invite__art" data-reveal data-parallax="0.07">
       <img class="shiva-seated" src="assets/shiva-parvati-flowers.webp" width="820" height="1227" loading="lazy" alt="Lord Shiva and Goddess Parvati in profile, framed by hibiscus, jasmine and the Himalayas">
     </div>
 
     <div class="invite__text">
-      <p class="lede" data-reveal>We’re delighted to invite you to the</p>
-      <h2 class="ceremony" data-reveal>Wedding of</h2>
+      <p class="lede" data-scrub>We’re delighted to invite you to the</p>
+      <h2 class="ceremony" data-split>Wedding of</h2>
       <div class="names" data-reveal>
-        <p class="name">Sai Prasanna Kumar</p>
+        <p class="name" data-write>Sai Prasanna Kumar</p>
         <p class="amp">&amp;</p>
-        <p class="name">Sushmitha</p>
+        <p class="name" data-write style="--d:.9s">Sushmitha</p>
       </div>
     </div>
 
-    <img class="float-kalash cut" src="assets/kalash.webp" width="183" height="239" loading="lazy" alt="" aria-hidden="true">
+    <img class="float-kalash cut" data-parallax="-0.12" src="assets/kalash.webp" width="183" height="239" loading="lazy" alt="" aria-hidden="true">
+    <div class="thread" aria-hidden="true"><i class="thread__line"></i><img src="assets/lotus.webp" width="460" height="451" loading="lazy" alt=""></div>
   </section>
 
   <!-- 3b. THE PLACES -->
   <section class="places" id="places">
-    <p class="eyebrow" data-reveal>Where we celebrate</p>
-    <h2 class="places__title" data-reveal>Two Cities, One Celebration</h2>
+    <p class="eyebrow" data-reveal>Our two celebrations</p>
+    <h2 class="places__title" data-split>A Wedding <em>by the Sea,</em> a Reception <em>at Home</em></h2>
+    <p class="places__sub" data-scrub>Join us in Visakhapatnam for the wedding, and in Hanamkonda for the reception.</p>
     <div class="places__grid">
       <article class="place" data-reveal>
         <div class="place__art place__art--coast">
@@ -103,6 +102,7 @@
         <p class="place__what">The Reception · 16 December</p>
       </article>
     </div>
+    <div class="thread thread--end" aria-hidden="true"><i class="thread__line"></i><b class="thread__dot"></b></div>
   </section>
 
   <!-- 4. THE EVENTS -->
@@ -110,7 +110,7 @@
     <div class="edge" aria-hidden="true"></div>
     <div class="details__inner">
       <p class="eyebrow eyebrow--light" data-reveal>Save the Date</p>
-      <h2 class="details__title" data-reveal>Join us as two families become one</h2>
+      <h2 class="details__title" data-split>Join us as two families become one</h2>
 
       <div class="cards" id="events"></div>
 
@@ -127,19 +127,19 @@
   <!-- 5. BLESSINGS + CLOSING SCENE -->
   <section class="closing" id="blessings">
     <div class="edge edge--cream" aria-hidden="true"></div>
-    <img class="closing__plant closing__plant--l cut" src="assets/banana.webp" width="610" height="898" loading="lazy" alt="" aria-hidden="true">
-    <img class="closing__plant closing__plant--r cut" src="assets/banana.webp" width="610" height="898" loading="lazy" alt="" aria-hidden="true">
+    <img class="closing__plant closing__plant--l cut" data-parallax="0.1" src="assets/banana.webp" width="610" height="898" loading="lazy" alt="" aria-hidden="true">
+    <img class="closing__plant closing__plant--r cut" data-parallax="0.1" src="assets/banana.webp" width="610" height="898" loading="lazy" alt="" aria-hidden="true">
     <div class="closing__text">
       <img class="garland-h garland-h--sm" data-reveal src="assets/garland-h.webp" width="726" height="156" loading="lazy" alt="" aria-hidden="true">
-      <div class="scroll" data-reveal><p class="blessing">Your presence and blessings will make this special day even more memorable.</p></div>
+      <div class="scroll" data-reveal><p class="blessing" data-scrub>Your presence and blessings will make this special day even more memorable.</p></div>
       <p class="eyebrow" data-reveal>With love</p>
       <div class="families" data-reveal><p class="families__line">Vadnala</p><p class="families__amp">&amp;</p><p class="families__line">Neelamsetty</p><p class="families__word">Families</p></div>
     </div>
 
     <div class="scene" data-reveal>
       <div class="scene__glow" aria-hidden="true"></div>
-      <div class="scene__plant scene__plant--left" aria-hidden="true"><img class="cut" src="assets/banana.webp" width="610" height="898" loading="lazy" alt=""></div>
-      <div class="scene__plant scene__plant--right" aria-hidden="true"><img class="cut" src="assets/banana.webp" width="610" height="898" loading="lazy" alt=""></div>
+      <div class="scene__plant scene__plant--left" data-parallax="0.06" aria-hidden="true"><img class="cut" src="assets/banana.webp" width="610" height="898" loading="lazy" alt=""></div>
+      <div class="scene__plant scene__plant--right" data-parallax="0.06" aria-hidden="true"><img class="cut" src="assets/banana.webp" width="610" height="898" loading="lazy" alt=""></div>
       <img class="scene__lamp scene__lamp--l cut" src="assets/lamps.webp" width="188" height="234" loading="lazy" alt="" aria-hidden="true">
       <img class="scene__lamp scene__lamp--r cut" src="assets/lamps.webp" width="188" height="234" loading="lazy" alt="" aria-hidden="true">
       <div class="scene__floor" aria-hidden="true"></div>
@@ -160,6 +160,6 @@
   <span class="music__bars" aria-hidden="true"><i></i><i></i><i></i></span>
 </button>
 
-<script src="script.js?v=7"></script>
+<script src="script.js?v=9"></script>
 </body>
 </html>
