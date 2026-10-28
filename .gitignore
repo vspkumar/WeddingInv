@@ -1,0 +1,11 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# build and packaging leftovers
+node_modules/
+*.zip
+__pycache__/
