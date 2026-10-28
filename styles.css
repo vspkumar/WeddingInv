@@ -622,7 +622,7 @@ html.gate-lock .music { visibility: hidden; }
 .place__lighthouse { position: absolute; left: -4%; bottom: -2%; width: 23%; }
 .place__boats { position: absolute; right: -3%; bottom: -6%; width: 27%; }
 .place__art--nandi { display: grid; place-items: center; }
-.place__nandi { width: min(52%,230px); }
+.place__nandi { width: min(92%,440px); }
 .place__name {
   color: var(--green);
   margin-top: 12px;

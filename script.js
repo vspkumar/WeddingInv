@@ -9,10 +9,10 @@
 const EVENTS = [
   { key: "wedding", label: "The Wedding", date: "2026-12-13", start: "20:21", hours: 3,
     time: "Muhurtham · 8:21 PM", note: "The auspicious moment",
-    city: "Visakhapatnam", venue: "", map: "", icon: "rings" },
+    city: "Visakhapatnam", venue: "", map: "https://maps.app.goo.gl/TcVRxxyKcqodkKpJ7", icon: "rings" },
   { key: "reception", label: "The Reception", date: "2026-12-16", start: "12:30", hours: 3,
     time: "Afternoon · 12:30 PM", note: "",
-    city: "Hanamkonda", venue: "", map: "", icon: "lotus" },
+    city: "Hanamkonda", venue: "", map: "https://maps.app.goo.gl/VEGnCmiHdCGdXLW86", icon: "lotus" },
 ];
 
 const WEDDING = "2026-12-13T20:21:00+05:30";
