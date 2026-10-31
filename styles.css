@@ -510,8 +510,9 @@ html.gate-lock, html.gate-lock body { overflow: hidden; }
   font-size: .76rem;
   font-weight: 600;
 }
-/* a J that sits on the line, in place of the display italic's descending J */
-.jw::first-letter { font-family: var(--sans); font-style: normal; font-weight: 500; }
+/* "Journey" and "Join" are set in the script face, whose J sits cleanly on the line */
+.hero__title em { font-family: var(--script); font-style: normal; font-weight: 400; font-size: 1.3em; line-height: .9; }
+.details__title { font-family: var(--script); font-weight: 400; font-size: clamp(2.7rem,10vw,4rem); line-height: 1.12; letter-spacing: .01em; }
 /* ---------- MUSIC TOGGLE (the little radio) ---------- */
 .music {
   position: fixed;
