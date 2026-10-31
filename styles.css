@@ -509,9 +509,9 @@ html.gate-lock, html.gate-lock body { overflow: hidden; }
 .music {
   position: fixed;
   z-index: 60;
-  right: calc(12px + env(safe-area-inset-right));
+  right: calc(10px + env(safe-area-inset-right));
   bottom: calc(12px + env(safe-area-inset-bottom));
-  width: 78px;
+  width: 52px;
   padding: 0;
   border: 0;
   background: none;
