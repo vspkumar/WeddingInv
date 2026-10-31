@@ -479,23 +479,28 @@ html.gate-lock, html.gate-lock body { overflow: hidden; }
   font-weight: 600;
 }
 .gate__open {
-  font: 500 .8rem/1 var(--sans);
-  letter-spacing: .24em;
-  text-transform: uppercase;
-  min-height: 54px;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 0;
   border: 0;
-  border-radius: 999px;
-  background: var(--maroon);
-  color: var(--cream);
+  background: none;
+  color: var(--maroon);
   cursor: pointer;
-  box-shadow: 0 0 0 5px rgba(138,28,44,.14),0 5px 0 var(--maroon-deep),0 14px 26px rgba(90,20,30,.28);
-  animation: beckon 2.4s ease-in-out infinite;
-  font-size: .92rem;
-  padding: 20px 38px;
+  -webkit-tap-highlight-color: transparent;
+  font: 600 .8rem/1 var(--sans);
+  letter-spacing: .26em;
+  text-transform: uppercase;
 }
-.gate__open:active { translate: 0 3px; }
-.gate__open:focus-visible { outline: 2px solid var(--maroon); outline-offset: 6px; }
-@keyframes beckon {50%{box-shadow:0 0 0 12px rgba(138,28,44,.06),0 5px 0 var(--maroon-deep),0 14px 26px rgba(90,20,30,.28)}}
+.gate__seal { width: clamp(118px,34vw,150px); height: auto; filter: drop-shadow(0 10px 12px rgba(70,15,25,.4)); animation: beckon 2.6s ease-in-out infinite; transition: transform .25s; }
+.gate__open:hover .gate__seal { transform: rotate(-4deg) scale(1.06); }
+.gate__open:active .gate__seal { transform: scale(.93); }
+.gate__open:focus { outline: none; }
+.gate__open:focus-visible .gate__seal { filter: drop-shadow(0 0 10px var(--gold)) drop-shadow(0 10px 12px rgba(70,15,25,.4)); }
+@keyframes beckon {50%{transform:scale(1.07) rotate(-2deg)}}
+/* old-letter feel: aged-paper vignette and a fine double rule */
+.js .gate::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(120% 90% at 50% 50%,transparent 55%,rgba(150,100,40,.22)); }
+.js .gate::after { content: ""; position: absolute; inset: 14px; pointer-events: none; border: 1px solid var(--gold-soft); outline: 1px solid rgba(184,134,43,.35); outline-offset: -6px; }
 .gate__note {
   margin-top: 18px;
   font-family: var(--sans);
@@ -974,7 +979,7 @@ html.gate-lock .music { visibility: hidden; }
 /* ---------- reduced motion: show everything, move nothing ---------- */
 @media (prefers-reduced-motion:reduce) {
   .js [data-reveal] { opacity: 1; translate: 0 0; transition: none; }
-  .garland, .scroll-cue i, .petal, .hero__hands img, .music[aria-pressed] .music__radio, .music__radio, .music__waves i, .gate__open { animation: none !important; }
+  .garland, .scroll-cue i, .petal, .hero__hands img, .music[aria-pressed] .music__radio, .music__radio, .music__waves i, .gate__seal { animation: none !important; }
   .gate { transition: none; }
   .petals { display: none; }
   .chip { transition: none; }
