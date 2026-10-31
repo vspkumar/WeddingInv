@@ -143,7 +143,7 @@ function splitWords(el, mode) {
           if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(" ")); return; }
           if (mode === "mask") {
             const outer = document.createElement("span"), inner = document.createElement("span");
-            outer.className = "w"; inner.className = "wi"; inner.style.setProperty("--i", n++); inner.textContent = part;
+            outer.className = "w"; inner.className = "wi"; inner.style.setProperty("--i", n++); inner.textContent = part; if (/^J/.test(part)) inner.classList.add("jw");
             outer.appendChild(inner); frag.appendChild(outer);
           } else {
             const s = document.createElement("span"); s.className = "sw"; s.textContent = part; n++; frag.appendChild(s);
