@@ -16,7 +16,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Jost:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/img/toran.webp" type="image/webp">
   <link rel="stylesheet" href="styles.css?v=9">
   <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -24,7 +23,7 @@
 
 <!-- Opening screen: the tap lets the music play -->
 <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
-  <img class="gate__toran" src="assets/img/toran.webp" width="1600" height="588" alt="">
+  <div class="gate__toran toran-set" aria-hidden="true"><img class="tp tp--left" src="assets/img/toran-left.webp" width="129" height="588" alt="" style="left:1.18%;top:0.00%;width:8.03%"><img class="tp tp--center" src="assets/img/toran-center.webp" width="1197" height="554" alt="" style="left:11.93%;top:0.00%;width:74.82%"><img class="tp tp--right" src="assets/img/toran-right.webp" width="122" height="584" alt="" style="left:90.19%;top:0.54%;width:7.64%"></div>
   <div class="gate__inner">
     <img class="gate__emblem" src="assets/img/ganesha-seated.webp" width="220" height="265" alt="Lord Ganesha">
     <p class="eyebrow">You are invited to the wedding of</p>
@@ -39,7 +38,7 @@
 
 <!-- 1. HERO -->
 <header class="hero" id="top">
-  <img class="toran" src="assets/img/toran.webp" width="1600" height="588" fetchpriority="high" alt="" aria-hidden="true">
+  <div class="toran toran-set" aria-hidden="true"><img class="tp tp--left" src="assets/img/toran-left.webp" width="129" height="588" alt="" style="left:1.18%;top:0.00%;width:8.03%"><img class="tp tp--center" src="assets/img/toran-center.webp" width="1197" height="554" alt="" style="left:11.93%;top:0.00%;width:74.82%"><img class="tp tp--right" src="assets/img/toran-right.webp" width="122" height="584" alt="" style="left:90.19%;top:0.54%;width:7.64%"></div>
 
   <div class="hero__inner">
     <img class="emblem" src="assets/img/ganesha.webp" width="319" height="318" alt="Lord Ganesha">
