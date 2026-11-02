@@ -9,10 +9,10 @@
 const EVENTS = [
   { key: "wedding", label: "The Wedding", date: "2026-12-13", start: "20:21", hours: 3,
     time: "Muhurtham · 8:21 PM", note: "The auspicious moment",
-    city: "Visakhapatnam", venue: "", map: "https://maps.app.goo.gl/TcVRxxyKcqodkKpJ7", icon: "rings" },
+    city: "Visakhapatnam", venue: "", map: "https://maps.app.goo.gl/TcVRxxyKcqodkKpJ7", icon: "wedding-logo" },
   { key: "reception", label: "The Reception", date: "2026-12-16", start: "12:30", hours: 3,
     time: "Afternoon · 12:30 PM", note: "",
-    city: "Hanamkonda", venue: "", map: "https://maps.app.goo.gl/VEGnCmiHdCGdXLW86", icon: "lotus" },
+    city: "Hanamkonda", venue: "", map: "https://maps.app.goo.gl/VEGnCmiHdCGdXLW86", icon: "reception-logo" },
 ];
 
 const WEDDING = "2026-12-13T20:21:00+05:30";
@@ -33,8 +33,7 @@ document.getElementById("events").innerHTML = EVENTS.map((e, i) => {
     <article class="card" data-reveal>
       <img class="card__corner card__corner--l" src="assets/img/filigree.webp" alt="" aria-hidden="true">
       <img class="card__corner card__corner--r" src="assets/img/filigree.webp" alt="" aria-hidden="true">
-      <img class="card__icon" src="assets/img/${e.icon}.webp" alt="" loading="lazy">
-      <p class="card__label">${esc(e.label)}</p>
+      <img class="card__icon" src="assets/img/${e.icon}.webp" alt="${esc(e.label)}" loading="lazy">
       <p class="card__big">${d.toLocaleString("en-US", { weekday: "long" })}</p>
       <p class="card__text">${day}<sup>${ordinal(day)}</sup> ${d.toLocaleString("en-US", { month: "long" })} ${d.getFullYear()}</p>
       <p class="card__time">${esc(e.time)}</p>

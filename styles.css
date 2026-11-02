@@ -1023,3 +1023,8 @@ html.gate-lock .music { visibility: hidden; }
 .details__title { font-size: clamp(2.2rem,8.6vw,3.8rem); }
 .hero__title .w, .details__title .w { padding: .3em .3em .3em; margin: -.3em -.3em -.3em; }
 @media (max-width:719px) { .names { margin-bottom: 3.4rem; } }
+
+/* ---- new header: toran with its two hanging garlands in one picture ---- */
+.toran, .gate__toran { width: 100%; max-width: 1200px; }
+.hero { padding-top: min(calc(min(100vw,1200px) * .30), 24svh); }
+.card__icon { width: min(92%,320px); height: auto; margin: -8px auto 10px; }
