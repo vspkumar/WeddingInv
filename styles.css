@@ -982,7 +982,7 @@ html.gate-lock .music { visibility: hidden; }
 /* ---------- reduced motion: show everything, move nothing ---------- */
 @media (prefers-reduced-motion:reduce) {
   .js [data-reveal] { opacity: 1; translate: 0 0; transition: none; }
-  .garland, .toran-set, .tp, .scroll-cue i, .petal, .hero__hands img, .music[aria-pressed] .music__radio, .music__radio, .music__waves i, .gate__seal { animation: none !important; }
+  .garland, .scroll-cue i, .petal, .hero__hands img, .music[aria-pressed] .music__radio, .music__radio, .music__waves i, .gate__seal { animation: none !important; }
   .gate { transition: none; }
   .petals { display: none; }
   .chip { transition: none; }
@@ -1024,9 +1024,6 @@ html.gate-lock .music { visibility: hidden; }
 .hero__title .w, .details__title .w { padding: .3em .3em .3em; margin: -.3em -.3em -.3em; }
 @media (max-width:719px) { .names { margin-bottom: 3.4rem; } }
 
-/* ---- new header: toran with its two hanging garlands in one picture ---- */
-.toran, .gate__toran { width: 100%; max-width: 1200px; position: absolute; left: 50%; translate: -50% 0; }
-.hero { padding-top: min(calc(min(100vw,1200px) * .30), 24svh); }
 .card__icon { width: min(92%,320px); height: auto; margin: -8px auto 10px; }
 
 /* ---- sakura blossoms in the petal colours: pink, blush, cream and marigold ---- */
@@ -1035,13 +1032,3 @@ html.gate-lock .music { visibility: hidden; }
 .petal:nth-child(3n) { background: radial-gradient(circle at 50% 60%,#f1e0b4,#fffdf5); }
 .petal:nth-child(4n) { background: radial-gradient(circle at 50% 60%,#f08a1c,#ffd36b); }
 @keyframes fall {0%{transform:translate3d(0,0,0) rotate(0);opacity:0}10%,88%{opacity:.95}100%{transform:translate3d(var(--drift,40px),112vh,0) rotate(var(--spin,420deg));opacity:0}}
-/* ---- the toran sways gently, and drops in when the invitation opens ---- */
-@keyframes toran-in {from{opacity:0;transform:translateY(-34px)}to{opacity:1;transform:none}}
-@keyframes swing {from{transform:rotate(-3.2deg)}to{transform:rotate(3.2deg)}}
-@keyframes sway-c {from{transform:rotate(-.5deg) translateX(-3px)}to{transform:rotate(.5deg) translateX(3px)}}
-.toran-set { aspect-ratio: 1600 / 588; animation: toran-in 1.3s var(--ease,ease) both; }
-.tp { position: absolute; height: auto; transform-origin: 50% 0; }
-.tp--left { animation: swing 4.6s ease-in-out 1.3s infinite alternate; }
-.tp--right { animation: swing 5.4s ease-in-out 1.7s infinite alternate-reverse; }
-.tp--center { transform-origin: 50% 0; animation: sway-c 7s ease-in-out 1.3s infinite alternate; }
-html.js:not(.opened) .toran { animation-play-state: paused; }
