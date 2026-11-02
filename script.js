@@ -85,11 +85,11 @@ document.addEventListener("click", (ev) => {
 (function () {
   const host = document.querySelector(".petals");
   if (!host || REDUCE) return;
-  const n = innerWidth < 720 ? 7 : 12;
+  const n = innerWidth < 720 ? 10 : 16;
   for (let i = 0; i < n; i++) {
-    const p = document.createElement("i"), s = 8 + Math.random() * 8;
+    const p = document.createElement("i"), s = 14 + Math.random() * 12;
     p.className = "petal";
-    p.style.cssText = `left:${Math.random() * 100}%;width:${s}px;height:${s * 1.4}px;--drift:${(Math.random() * 2 - 1) * 120}px;--spin:${(Math.random() * 2 - 1) * 540}deg;animation-duration:${13 + Math.random() * 12}s;animation-delay:${-Math.random() * 22}s`;
+    p.style.cssText = `left:${Math.random() * 100}%;width:${s}px;height:${s}px;--drift:${(Math.random() * 2 - 1) * 120}px;--spin:${(Math.random() * 2 - 1) * 540}deg;animation-duration:${13 + Math.random() * 12}s;animation-delay:${-Math.random() * 22}s`;
     host.appendChild(p);
   }
 })();
