@@ -414,7 +414,7 @@ html.gate-lock, html.gate-lock body { overflow: hidden; }
   font-size: clamp(2.8rem,2.2rem + 3vw,4rem);
   line-height: 1.1;
 }
-.footer__names span {
+.footer__names .and {
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
@@ -463,7 +463,7 @@ html.gate-lock, html.gate-lock body { overflow: hidden; }
   color: var(--green);
   margin-top: 6px;
 }
-.gate__names span {
+.gate__names .and {
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
@@ -740,7 +740,7 @@ html.gate-lock .music { visibility: hidden; }
   .scene__lamp--r { right: 19%; }
 }
 .footer__names { color: #4a0f18; text-shadow: 0 1px 0 rgba(255,236,190,.6); }
-.footer__names span { color: #7a1520; }
+.footer__names .and { color: #7a1520; }
 /* ---- motion: gentle breathing / enlarging on most art ---- */
 @keyframes breathe {from{scale:1;translate:0 0}to{scale:1.04;translate:0 -6px}}
 @keyframes breathe-s {from{scale:1}to{scale:1.06}}
@@ -828,7 +828,7 @@ html.gate-lock .music { visibility: hidden; }
   color: #fff3da;
   text-shadow: 0 2px 12px rgba(0,0,0,.35);
 }
-.footer__names span {
+.footer__names .and {
   font-family: var(--serif);
   font-style: italic;
   font-weight: 600;
@@ -1009,3 +1009,17 @@ html.gate-lock .music { visibility: hidden; }
   .thread__dot { scale: 1; transition: none; }
   [data-parallax] { transform: none; will-change: auto; }
 }
+
+/* ---- each name on its own line, never wrapped ---- */
+.gate__names .nm, .footer__names .nm { display: block; white-space: nowrap; }
+.gate__names .and, .footer__names .and { display: block; line-height: 1.1; }
+.gate__names { font-size: clamp(2.2rem,9.4vw,4.8rem); }
+.footer__names { font-size: clamp(2.2rem,9.4vw,4.6rem); }
+.name { white-space: nowrap; text-wrap: nowrap; }
+@media (max-width:719px) { .name { font-size: min(10.2vw,4.4rem); } }
+/* ---- headline in one face: the script ---- */
+.hero__title { font-family: var(--script); font-weight: 400; font-size: clamp(2.6rem,min(12.6vw,7.4svh),5rem); line-height: 1.08; letter-spacing: 0; }
+.hero__title em { font-size: 1.12em; line-height: .95; }
+.details__title { font-size: clamp(2.2rem,8.6vw,3.8rem); }
+.hero__title .w, .details__title .w { padding: .3em .3em .3em; margin: -.3em -.3em -.3em; }
+@media (max-width:719px) { .names { margin-bottom: 3.4rem; } }
